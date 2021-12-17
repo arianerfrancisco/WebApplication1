@@ -10,9 +10,8 @@
 
         public bool Concluido { get; private set; }
 
-
-        public string DateTime DataCadastro { get; private set; }
+        public  DateTime DataCadastro { get; private set; }
         
-        public string DateTime? DataConclusao { get; private set; }
+        public  DateTime? DataConclusao { get; private set; }
     }
 }
