@@ -11,10 +11,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TaskManager.API.Data.Configurations;
-using TaskManager.API.Data.Repositories;
+using WebApplication1.Data.Configurations;
+using WebApplication1.Data.Repositories;
 
-namespace TaskManager.API
+namespace WebApplication1
 {
     public class Startup
     {
@@ -33,9 +33,9 @@ namespace TaskManager.API
             services.AddSingleton<ITarefasRepository, TarefasRepository>();
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            object p = services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskManager.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
             });
 
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder => {
