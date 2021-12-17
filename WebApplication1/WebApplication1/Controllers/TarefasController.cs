@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Data.Repositories;
 
 namespace WebApplication1.Controllers
 {
@@ -6,6 +7,10 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class TarefasController : ControllerBase
     {
+
+        private ITarefasRepository _tarefasRepository;
+
+        
         // GET: api/<TarefasController>
         [HttpGet]
         public IEnumerable<string> Get()
